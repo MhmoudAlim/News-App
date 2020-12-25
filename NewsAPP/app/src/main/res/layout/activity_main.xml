@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <GridView
+        android:id="@+id/imagesGv"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:hapticFeedbackEnabled="true"
+        android:numColumns="auto_fit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchIcon"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="OnClick">
+
+    </GridView>
+
+    <EditText
+        android:id="@+id/searchTv"
+        android:layout_width="296dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        android:ems="10"
+        android:hint="Search Keyword (EN only)"
+        android:inputType="text"
+        android:visibility="gone"
+        android:maxLength="10"
+        app:layout_constraintEnd_toStartOf="@+id/searchIcon"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+    <ImageButton
+        android:id="@+id/searchIcon"
+        android:layout_width="72dp"
+        android:layout_height="47dp"
+        android:layout_marginEnd="16dp"
+        android:background="#00FFFFFF"
+        android:onClick="searchNewsIcon"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/searchTv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@android:drawable/ic_menu_search"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

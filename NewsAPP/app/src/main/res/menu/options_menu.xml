@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:checked="true"
+        android:onClick="searchMenuItem"
+        android:title="Search" />
+    <item
+        android:onClick="latestNews"
+        android:title="latest news" />
+
+    <item
+        android:icon="@drawable/moon"
+        android:menuCategory="container"
+        android:onClick="nightModeBtn"
+        android:title="Night mode"
+        app:showAsAction="always" />
+    <item
+        android:icon="@drawable/sun"
+        android:menuCategory="container"
+        android:onClick="lightModeBtn"
+        android:title="Light mode"
+        android:visible="true"
+        app:showAsAction="always" />
+</menu>
